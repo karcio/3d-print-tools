@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>E-STEPS calibration</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="text-success">X, Y, Z, E-steps calculation v 0.2</h1>
+    <br>
+    <p class="h6">sample value in Merlin firmware:</p>
+    <p class="h6">#define DEFAULT_AXIS_STEPS_PER_UNIT { X, Y, Z, E}</p>
+    <br>
+
+    <p><input class="form-control" type="number" min="0" value="0" step=".01" id="expDimention">
+      <label class="text-muted" for="expDimention">insert expected dimention [mm] *</label>
+    </p>
+
+    <p><input class="form-control" type="number" min="0" value="0" step=".01" id="obsDimention">
+      <label class="text-muted" for="obsDimention">insert observed dimention [mm] *</label></p>
+
+    <p><input class="form-control" type="number" min="0" value="0" step=".01" id="curSteps">
+      <label class="text-muted" for="curSteps">insert current steps *</label>
+    </p>
+
+    <p><button type="button" class="btn btn-outline-dark" onclick="calculation();">Calculate</button></p>
+    <script type="text/javascript" src="js/script.js"></script>
+
+    <p id="value"></p>
+
+  </div>
+</body>
+
+</html>

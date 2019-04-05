@@ -1,5 +1,5 @@
 function httpGetAsync(city) {
-	var url = 'https://api.openweathermap.org/data/2.5/weather?id=' + city + '&appid=8d0d43256b8bfb855fd1750d1bd612cd';
+	var url = 'https://api.openweathermap.org/data/2.5/weather?id=' + city + '&appid=apikey';
 	var request = new XMLHttpRequest();
 
 	request.onreadystatechange = function() {
